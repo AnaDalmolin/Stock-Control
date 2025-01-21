@@ -6,13 +6,15 @@ import { RouterModule } from '@angular/router';
 import { SidebarModule } from 'primeng/sidebar';
 import { ButtonModule } from 'primeng/button';
 import { ToolbarModule } from 'primeng/toolbar';
-
-import { DashboardHomeComponent } from './page/dashboard-home/dashboard-home.component';
-import { DASHBOARD_ROUTES } from './dashboard.routing';
+import { ChartModule } from 'primeng/chart';
 import { CardModule } from 'primeng/card';
 import { ToastModule } from 'primeng/toast';
 import { MessageService } from 'primeng/api';
+
+import { DashboardHomeComponent } from './page/dashboard-home/dashboard-home.component';
+import { DASHBOARD_ROUTES } from './dashboard.routing';
 import { CookieService } from 'ngx-cookie-service';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 @NgModule({
   declarations: [DashboardHomeComponent],
@@ -27,6 +29,8 @@ import { CookieService } from 'ngx-cookie-service';
     ToolbarModule,
     CardModule,
     ToastModule,
+    ChartModule,
+    SharedModule
   ],
   providers: [MessageService, CookieService],
 })
